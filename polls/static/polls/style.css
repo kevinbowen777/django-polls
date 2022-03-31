@@ -1,5 +1,26 @@
 li a {
   color: green;
+  font-family: Helvetica, "Times New Roman", sans-serif;
+  /* font-family: Verdana, DejaVu Sans, sans-serif; */
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+h1   {
+  color: #0000ff;
+  font-family: Helvetica, "Times New Roman", sans-serif;
+  font-size: 36px;
+}
+label {
+  color: green;
+  font-family: Helvetica, "Times New Roman", sans-serif;
+  font-size: 18px;
+}
+li {
+  color: green;
+  font-family: Helvetica, "Times New Roman", sans-serif;
+  font-size: 18px;
 }
 body {
   background: white url("images/background.jpg") repeat;
+}

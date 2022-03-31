@@ -1,6 +1,6 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
-<h1>{{ question.question_text }}</h1>
+<h1>{{ question.question_text }} - Poll results</h1>
 
 <ul>
 {% for choice in question.choice_set.all %}
