@@ -1,0 +1,11 @@
+asgiref @ file:///home/kbowen/.cache/pypoetry/artifacts/71/66/fe/0268717622fd9cf036d2fb46b7ad84ad39e3776bc461ce21a4284f32d2/asgiref-3.5.0-py3-none-any.whl
+dj-database-url @ file:///home/kbowen/.cache/pypoetry/artifacts/4d/45/5f/ecd99aa66306968dc0a97beb09e86273947cb94400fddfa1d308d10331/dj_database_url-0.5.0-py2.py3-none-any.whl
+dj-email-url @ file:///home/kbowen/.cache/pypoetry/artifacts/fb/80/72/5f336118db261fef4a879bf50d3cb4ff747dd1d2a610b14b60a532b307/dj_email_url-1.0.5-py2.py3-none-any.whl
+Django @ file:///home/kbowen/.cache/pypoetry/artifacts/d2/f7/2f/c0e702d1642fb474e7bca46dacd4112739640d4f02cdea4c8f1dd58b29/Django-4.0.3-py3-none-any.whl
+django-cache-url @ file:///home/kbowen/.cache/pypoetry/artifacts/44/fe/76/672cde12e39eff568c07ca2c62db97f751c6ead8c52b1f3b181828b6b5/django_cache_url-3.4.0-py2.py3-none-any.whl
+environs @ file:///home/kbowen/.cache/pypoetry/artifacts/03/3a/2c/b1c48821c153bd40186099cd1e72d6a8b15023ae6caa88f771d6055c32/environs-9.5.0-py2.py3-none-any.whl
+marshmallow @ file:///home/kbowen/.cache/pypoetry/artifacts/9b/86/b1/380be036666ca2f50dc8ccb0432607585f22c309b90eccb77ada1140e6/marshmallow-3.15.0-py3-none-any.whl
+packaging @ file:///home/kbowen/.cache/pypoetry/artifacts/d3/1f/90/3f2473250ebd055fe7f0856810677783949fc0d2e5f25bbb4dc00ad0a9/packaging-21.3-py3-none-any.whl
+pyparsing @ file:///home/kbowen/.cache/pypoetry/artifacts/dd/d9/cf/3501b38e834b80f9ba80633358cced32539bea5dc1e786f4c2b1d2f682/pyparsing-3.0.7-py3-none-any.whl
+python-dotenv @ file:///home/kbowen/.cache/pypoetry/artifacts/03/b3/0a/614098987b7913fdcbdc5e81af3d9b7deecbb2d3802ad78521603deb1e/python_dotenv-0.20.0-py3-none-any.whl
+sqlparse @ file:///home/kbowen/.cache/pypoetry/artifacts/10/f5/22/c9c991a71e27c4d8f69907d92cce74a369cbb3183dc4a6d27e2ae4ab0b/sqlparse-0.4.2-py3-none-any.whl
