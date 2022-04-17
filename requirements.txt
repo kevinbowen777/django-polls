@@ -5,8 +5,9 @@ click @ file:///home/kbowen/.cache/pypoetry/artifacts/91/49/3a/c7bac12b8fd30b018
 distlib @ file:///home/kbowen/.cache/pypoetry/artifacts/c6/c9/9e/cc7bc0747799b29bba3f47bcb03116150430ae8e40a7477a11ff4fdc11/distlib-0.3.4-py2.py3-none-any.whl
 dj-database-url @ file:///home/kbowen/.cache/pypoetry/artifacts/4d/45/5f/ecd99aa66306968dc0a97beb09e86273947cb94400fddfa1d308d10331/dj_database_url-0.5.0-py2.py3-none-any.whl
 dj-email-url @ file:///home/kbowen/.cache/pypoetry/artifacts/fb/80/72/5f336118db261fef4a879bf50d3cb4ff747dd1d2a610b14b60a532b307/dj_email_url-1.0.5-py2.py3-none-any.whl
-Django==4.0.4
+Django @ file:///home/kbowen/.cache/pypoetry/artifacts/d2/f7/2f/c0e702d1642fb474e7bca46dacd4112739640d4f02cdea4c8f1dd58b29/Django-4.0.3-py3-none-any.whl
 django-cache-url @ file:///home/kbowen/.cache/pypoetry/artifacts/44/fe/76/672cde12e39eff568c07ca2c62db97f751c6ead8c52b1f3b181828b6b5/django_cache_url-3.4.0-py2.py3-none-any.whl
+django-crispy-forms @ file:///home/kbowen/.cache/pypoetry/artifacts/65/70/63/5f29784a52afb2f52f626239ac6d86ddae9cc1862bdc3a4c11983240b0/django_crispy_forms-1.14.0-py3-none-any.whl
 environs @ file:///home/kbowen/.cache/pypoetry/artifacts/03/3a/2c/b1c48821c153bd40186099cd1e72d6a8b15023ae6caa88f771d6055c32/environs-9.5.0-py2.py3-none-any.whl
 filelock @ file:///home/kbowen/.cache/pypoetry/artifacts/a8/20/28/a68f0cd5cc8d74df3bcbc2b43dca88911b9f17ee0bba631433c2610696/filelock-3.6.0-py3-none-any.whl
 flake8 @ file:///home/kbowen/.cache/pypoetry/artifacts/6b/d8/67/6516837c645c57af9cad7b290e1e6cbe92a126641fa84a5dde6495f3c3/flake8-4.0.1-py2.py3-none-any.whl
@@ -22,7 +23,7 @@ platformdirs @ file:///home/kbowen/.cache/pypoetry/artifacts/ca/49/cb/6716417b22
 pre-commit @ file:///home/kbowen/.cache/pypoetry/artifacts/a9/08/5f/365312191b96b84c14ebf979dbd7b8ffe8895b8671f1d6c8c6898d4cf1/pre_commit-2.18.1-py2.py3-none-any.whl
 pycodestyle @ file:///home/kbowen/.cache/pypoetry/artifacts/67/1d/0b/aa6ec86495f3fc57e748e006fb36d7b4e65ddaf6de336617166ccad96d/pycodestyle-2.8.0-py2.py3-none-any.whl
 pyflakes @ file:///home/kbowen/.cache/pypoetry/artifacts/ce/06/1e/5fd69e017a941ae783a7e4d3fb29abc5238f0026d7745b4dc26d7e3379/pyflakes-2.4.0-py2.py3-none-any.whl
-pyparsing==3.0.8
+pyparsing @ file:///home/kbowen/.cache/pypoetry/artifacts/dd/d9/cf/3501b38e834b80f9ba80633358cced32539bea5dc1e786f4c2b1d2f682/pyparsing-3.0.7-py3-none-any.whl
 python-dotenv @ file:///home/kbowen/.cache/pypoetry/artifacts/03/b3/0a/614098987b7913fdcbdc5e81af3d9b7deecbb2d3802ad78521603deb1e/python_dotenv-0.20.0-py3-none-any.whl
 PyYAML @ file:///home/kbowen/.cache/pypoetry/artifacts/72/40/79/b7f82de66d678bc8de004df69ca112b99a38e71beff3aef6c4e2349303/PyYAML-6.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl
 six @ file:///home/kbowen/.cache/pypoetry/artifacts/89/b2/f8/fd92b6d5daa0f8889429b2fc67ec21eedc5cae5d531ee2853828ced6c7/six-1.16.0-py2.py3-none-any.whl
