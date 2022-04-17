@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # Local
-    "polls.apps.PollsConfig",
+    "polls",
 ]
 
 MIDDLEWARE = [

@@ -3,15 +3,17 @@ repos:
     rev: v4.1.0
     hooks:
       - id: check-added-large-files
+      - id: check-toml
+      - id: check-yaml
+      - id: debug-statements
+      - id: detect-private-key
+      - id: end-of-file-fixer
       - id: requirements-txt-fixer
       - id: trailing-whitespace
   - repo: https://github.com/psf/black
     rev: 22.3.0
     hooks:
     - id: black
-      exclude: \.py-tpl$
-      exclude: polls/migrations/*
-      exclude: ^.*\b(migrations)\b.*$
   - repo: https://github.com/PyCQA/flake8
     rev: 4.0.1
     hooks:
