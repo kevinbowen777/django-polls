@@ -7,10 +7,13 @@
 {% block content %}
   <h1>Homepage of Django Polls</h1>
   {% if user.is_authenticated %}
-    Hi {{ user.email }}!
+  <p>Hi {{ user.email }}!</p>
+    <img class="greeting" src="{% static 'images/binturong.jpg' %}">
     <p><a href="{% url 'logout' %}">Log Out</a></p>
   {% else %}
     <p>You are not logged in</p>
+    <img class="greeting" src="{% static 'images/burroughs.jpg' %}">
+    <p>
     <a href="{% url 'login' %}">Log In</a>
   {% endif %}
 {% endblock content %}

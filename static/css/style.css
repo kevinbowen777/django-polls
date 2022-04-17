@@ -24,3 +24,7 @@ li {
 body {
   background: white url("images/background.jpg") repeat;
 }
+.greeting {
+  height: 50px;
+  width: auto;
+}
