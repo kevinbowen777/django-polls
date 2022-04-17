@@ -1,5 +1,7 @@
+{% extends 'base.html' %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+
+{% block content %}
 <h1>{{ question.question_text }} - Poll results</h1>
 
 <ul>
@@ -11,3 +13,4 @@
 
 <input type="button"
 onclick="location.href={% url 'index' %};" value="Return to poll list"/>
+{% endblock content %}
