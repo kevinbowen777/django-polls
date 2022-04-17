@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import include, path
-from polls.views import HomePageView
+
+from .views import AboutPageView, HomePageView
 
 urlpatterns = [
     # Django admin
@@ -9,5 +10,6 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     # Local applications
     path("", HomePageView.as_view(), name="home"),
+    path("about/", AboutPageView.as_view(), name="about"),
     path("polls/", include("polls.urls")),
 ]
