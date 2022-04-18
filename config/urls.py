@@ -11,5 +11,6 @@ urlpatterns = [
     # Local applications
     path("", HomePageView.as_view(), name="home"),
     path("about/", AboutPageView.as_view(), name="about"),
+    path("accounts/", include("accounts.urls")),
     path("polls/", include("polls.urls")),
 ]
