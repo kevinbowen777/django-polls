@@ -11,7 +11,8 @@ exclude = '''
   | staticfiles
   | build
   | dist
-  | pages/migrations
+  | accounts/migrations/0001_initial.py
+  | polls/migrations/0001_initial.py
   | ^.*\b(migrations)\b.*$
 )/
 '''
