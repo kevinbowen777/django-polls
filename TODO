@@ -1,22 +1,13 @@
-todo
+TODO - current as of 20220418
 
-if then with 'djano polls' link
-    if authenticated take to polls
-    else send to signup
-
-move 'about' page to far right for both logged in and anon users
-
-
-convert to postgres
-
-add docker
-
-create sample polls
-
-create test user
-
-add profile page with forgot password link
-
-set up email verification
-
-add auth with github
+ - if then with 'djano polls' link
+      if authenticated take to polls
+      else send to signup
+ - move 'about' page to far right for both logged in and anon users
+ - convert to postgres
+ - add docker
+ - create sample polls
+ - create test user
+ - add profile page with forgot password link
+ - set up email verification
+ - add social auth login with GitHub
