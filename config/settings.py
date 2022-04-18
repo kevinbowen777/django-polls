@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sites",
     # Third-party
     "crispy_forms",
     # Local
@@ -121,14 +122,17 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 
+AUTH_USER_MODEL = "accounts.CustomUser"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-AUTH_USER_MODEL = "accounts.CustomUser"
-
-LOGIN_REDIRECT_URL = "home"
-LOGOUT_REDIRECT_URL = "home"
 
 # django-crispy-forms
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+# django-allauth config
+SITE_ID = 1
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home"
