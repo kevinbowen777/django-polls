@@ -9,11 +9,9 @@
   {% if user.is_authenticated %}
   <p>Hi {{ user.email }}!</p>
     <img class="greeting" src="{% static 'images/binturong.jpg' %}">
-    <p><a href="{% url 'logout' %}">Log Out</a></p>
   {% else %}
     <p>You are not logged in</p>
     <img class="greeting" src="{% static 'images/burroughs.jpg' %}">
     <p>
-    <a href="{% url 'login' %}">Log In</a>
   {% endif %}
 {% endblock content %}
