@@ -11,3 +11,6 @@ TODO - current as of 20220418
  - add profile page with forgot password link
  - set up email verification
  - add social auth login with GitHub
+
+### Post allauth implementation
+ - `rm accounts/urls.py`
