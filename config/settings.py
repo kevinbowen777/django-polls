@@ -33,6 +33,8 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     # Third-party
     "crispy_forms",
+    "allauth",
+    "allauth.account",
     # Local
     "accounts",
     "polls",
