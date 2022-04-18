@@ -136,3 +136,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 SITE_ID = 1
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends'ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
