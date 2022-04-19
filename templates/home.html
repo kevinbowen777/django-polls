@@ -6,13 +6,11 @@
 
 {% block content %}
   <h1>Homepage of Django Polls</h1>
-  <img class="greeting" src="{% static 'images/binturong.jpg' %}">
   {% if user.is_authenticated %}
     <p>Hi {{ user.email }}!</p>
-    <p><a href="{% url 'account_logout' %}">Log Out</a></p>
+    <img class="greeting" src="{% static 'images/binturong.jpg' %}">
   {% else %}
     <p>You are not logged in</p>
     <img class="greeting" src="{% static 'images/burroughs.jpg' %}">
-    <a href="{% url 'account_signup' %}">Sign Up</a></p>
   {% endif %}
 {% endblock content %}
