@@ -22,7 +22,7 @@ li {
   font-size: 18px;
 }
 body {
-  background: white url("images/background.jpg") repeat;
+  background: white url("../images/background.jpg") repeat;
 }
 .greeting {
   height: auto;
