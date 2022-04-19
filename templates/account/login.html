@@ -4,10 +4,16 @@
 {% block title %}Log In{% endblock title %}
 
 {% block content %}
-  <h2>Log In</h2>
+  <h3>Log in to your Django Polls account</h3>
   <form method="post">
     {% csrf_token %}
     {{ form|crispy }}
-    <button class="btn btn-success" type="submit">Log In</button>
+    <button class="btn btn-success btn-block" type="submit">Log In</button>
+    <p class="text-center text-muted">OR</p>
+    <button class="btn btn-dark btn-block" type="submit">Continue with GitHub</button>
   </form>
+  <p class="text-center mt-3">
+    New to Django Polls?
+    <a href={% url 'account_signup' %}">Sign Up</a>
+  </p>
 {% endblock content %}
