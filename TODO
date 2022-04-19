@@ -14,3 +14,4 @@ TODO - current as of 20220418
 
 ### Post allauth implementation
  - `rm accounts/urls.py`
+ - `rm -r templates/registration`
