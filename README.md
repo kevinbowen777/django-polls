@@ -21,6 +21,8 @@ functionality.
 ### Screenshots
 ![Poll list](https://github.com/kevinbowen777/django_polls/blob/master/images/poll_list.png)
 
+![Poll
+detail](https://github.com/kevinbowen777/django_polls/blob/master/images/poll_detail.png)
 
 
 ---
