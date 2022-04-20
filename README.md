@@ -21,9 +21,10 @@ functionality.
 ### Screenshots
 ![Poll list](https://github.com/kevinbowen777/django_polls/blob/master/images/poll_list.png)
 
-![Poll
-detail](https://github.com/kevinbowen777/django_polls/blob/master/images/poll_detail.png)
+![Poll detail](https://github.com/kevinbowen777/django_polls/blob/master/images/poll_detail.png)
 
+
+![Poll results](https://github.com/kevinbowen777/django_polls/blob/master/images/poll_results.png)
 
 ---
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kevinbowen777/django_polls/blob/master/LICENSE)
