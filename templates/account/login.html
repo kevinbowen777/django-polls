@@ -6,7 +6,7 @@
 
 {% block content %}
   <h3>Log in to your Django Polls account</h3>
-  <form method="post">
+  <form class="col-md-6" method="post">
     {% csrf_token %}
     {{ form|crispy }}
     <button class="btn btn-success" type="submit">Log In</button>
