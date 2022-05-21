@@ -1,16 +1,31 @@
 # Pull base image
 FROM python:3.10
 
+ARG DJANGO_POLLS
+
 # Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+ENV DJANGO_POLLS=${DJANGO_POLLS} \
+  PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONFAULTHANDLER=1 \
+  PYTHONUNBUFFERED=1 \
+  PYTHONHASHSEED=random \
+  PIP_NO_CACHE_DIR=off \
+  PIP_DISABLE_PIP_VERSION_CHECK=on \
+  PIP_DEFAULT_TIMEOUT=100 \
+  POETRY_VERSION=1.1.13
+
+# System dependencies
+RUN pip install "poetry==$POETRY_VERSION"
 
 # Set work directory
 WORKDIR /django_polls
 
 # Install dependencies
-COPY Pipfile Pipfile.lock /django_polls/
-RUN pip install pipenv && pipenv install --system
+COPY poetry.lock pyproject.toml /django_polls/
+
+# Project initialization:
+RUN poetry config virtualenvs.create false
+RUN poetry install
 
 # Copy project
 COPY . /django_polls/
