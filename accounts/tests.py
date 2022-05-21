@@ -38,7 +38,7 @@ class SignupPageTests(TestCase):
     email = "newuser@example.com"
 
     def setUp(self):
-        url = reverse("signup")
+        url = reverse("account_signup")
         self.response = self.client.get(url)
 
     def test_signup_template(self):
