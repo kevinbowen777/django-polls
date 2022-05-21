@@ -2,6 +2,7 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.1.0
     hooks:
+    # add supported hooks https://pre-commit.com/hooks.html
       - id: check-added-large-files
       - id: check-toml
       - id: check-yaml
@@ -14,6 +15,10 @@ repos:
     rev: 22.3.0
     hooks:
     - id: black
+      exclude: ^.*\b(migrations)\b.*$
+      # See bug: https://github.com/psf/black/issues/2964
+      # If possible, run rev: 22.3.0 to obviate the need for pinning click
+      # additional_dependencies: ["click==8.0.4"]
   - repo: https://github.com/PyCQA/flake8
     rev: 4.0.1
     hooks:
