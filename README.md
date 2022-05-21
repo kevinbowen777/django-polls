@@ -14,7 +14,7 @@ functionality.
  - `git clone git@github.com:kevinbowen777/django_polls.git
  - `cd django_polls`
  - `mkvirtualenv django_polls` or `workon django_polls`
- - `python manage.py runserver`
+ - `python manage.py runserver` or `docker-compose up`
  - Navigate to http://127.0.0.1:8000/
 
 ---
