@@ -18,14 +18,14 @@ ENV DJANGO_POLLS=${DJANGO_POLLS} \
 RUN pip install "poetry==$POETRY_VERSION"
 
 # Set work directory
-WORKDIR /django_polls
+WORKDIR /code
 
 # Install dependencies
-COPY poetry.lock pyproject.toml /django_polls/
+COPY poetry.lock pyproject.toml /code/
 
 # Project initialization:
 RUN poetry config virtualenvs.create false
 RUN poetry install
 
 # Copy project
-COPY . /django_polls/
+COPY . /code/
