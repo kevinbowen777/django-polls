@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     # Third-party
     "debug_toolbar",
+    "django_extensions",
     "crispy_forms",
     "allauth",
     "allauth.account",
