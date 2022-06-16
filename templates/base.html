@@ -41,6 +41,9 @@
             <div class="dropdown-menu dropdown-menu-lg-right"
             aria-labelledby="navbarDropdown">
               <a class="dropdown-item"
+              href="{% url 'user_detail' user.username %}">My Profile</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item"
               href="{% url 'account_set_password' %}">Change password</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item"
