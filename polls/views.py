@@ -3,8 +3,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.utils import timezone
-from django.views import generic
-from django.views.generic import TemplateView
+from django.views.generic import DetailView, ListView, TemplateView
 
 from .models import Choice, Question
 
@@ -13,7 +12,7 @@ class HomePageView(TemplateView):
     template_name = "polls/home.html"
 
 
-class IndexView(generic.ListView):
+class IndexView(ListView):
     template_name = "polls/index.html"
     context_object_name = "latest_question_list"
 
@@ -27,7 +26,7 @@ class IndexView(generic.ListView):
         )[:5]
 
 
-class DetailView(generic.DetailView):
+class DetailView(DetailView):
     model = Question
     template_name = "polls/detail.html"
 
@@ -38,7 +37,7 @@ class DetailView(generic.DetailView):
         return Question.objects.filter(pub_date__lte=timezone.now())
 
 
-class ResultsView(generic.DetailView):
+class ResultsView(DetailView):
     model = Question
     template_name = "polls/results.html"
 
