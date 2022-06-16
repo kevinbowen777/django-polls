@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import F
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
@@ -12,7 +13,7 @@ class HomePageView(TemplateView):
     template_name = "polls/home.html"
 
 
-class IndexView(ListView):
+class IndexView(LoginRequiredMixin, ListView):
     template_name = "polls/index.html"
     context_object_name = "latest_question_list"
 
@@ -26,7 +27,7 @@ class IndexView(ListView):
         )[:5]
 
 
-class DetailView(DetailView):
+class DetailView(LoginRequiredMixin, DetailView):
     model = Question
     template_name = "polls/detail.html"
 
@@ -37,7 +38,7 @@ class DetailView(DetailView):
         return Question.objects.filter(pub_date__lte=timezone.now())
 
 
-class ResultsView(DetailView):
+class ResultsView(DetailView, LoginRequiredMixin):
     model = Question
     template_name = "polls/results.html"
 
