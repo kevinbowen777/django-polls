@@ -1,11 +1,13 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 
 {% block title %}Django Polls - Home{% endblock title %}
 
 
 {% block content %}
-  <h1>Homepage of Django Polls</h1>
+<div class="container">
+  <p>
+  <h2>Homepage of Django Polls</h2>
   {% if user.is_authenticated %}
     <p>Hi {{ user.email }}!</p>
     <img class="greeting" src="{% static 'images/binturong.jpg' %}">
@@ -13,4 +15,6 @@
     <p>You are not logged in</p>
     <img class="greeting" src="{% static 'images/burroughs.jpg' %}">
   {% endif %}
+  </p>
+</div>
 {% endblock content %}
