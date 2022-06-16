@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount.providers.github",
     # Local
     "accounts",
+    "pages",
     "polls",
 ]
 
