@@ -158,6 +158,9 @@ EMAIL_HOST_PASSWORD = env.str("EMAIL_HOST_PASSWORD")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+MEDIA_URL = "/media/"
+MEDIA_ROOT = str(BASE_DIR.joinpath("media"))
+
 # django-debug-toolbar
 
 import socket
