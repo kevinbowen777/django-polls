@@ -9,8 +9,12 @@
   <p>
   <h2>Homepage of Django Polls</h2>
   {% if user.is_authenticated %}
-    <p>Hi {{ user.email }}!</p>
-    <img class="greeting" src="{% static 'images/binturong.jpg' %}">
+    <p>Hi {{ user.name }}!</p>
+    {% if user.profile_pic %}
+      <img class="profile_pic" src="{{ user.profile_pic.url }}" alt="{{ user.name }}">
+    {% else %}
+      <img class="greeting" src="{% static 'images/binturong.jpg' %}">
+    {% endif %}
   {% else %}
     <p>You are not logged in</p>
     <img class="greeting" src="{% static 'images/burroughs.jpg' %}">
