@@ -28,3 +28,8 @@ body {
   height: auto;
   width: 150px;
 }
+
+.profile_pic {
+  height: 300px;
+  width: auto;
+}
