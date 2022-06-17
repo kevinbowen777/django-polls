@@ -32,6 +32,7 @@ class UserUpdateView(LoginRequiredMixin, UpdateView):
     fields = [
         "name",
         "bio",
+        "profile_pic",
     ]
     model = User
 
