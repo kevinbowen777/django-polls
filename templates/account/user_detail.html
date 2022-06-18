@@ -13,12 +13,18 @@
       {% if object.name %}
         <p>{{ object.name }}</p>
       {% endif %}
+      {% if user.country %}
+        <p><strong>Country:</strong> {{ user.country.name }}
+        <img src="{{ user.country.flag }}" />
+        </p>
+      {% endif %}
       {% if object.profile_pic %}
         <p>
         <img class="profile_pic" src="{{ object.profile_pic.url }}" alt="{{ object.name }}">
         </p>
       {% endif %}
       {% if object.bio %}
+        <p><strong>About me:</strong></p>
         <p>{{ object.bio|linebreaksbr }}</p>
       {% endif %}
     </div>
