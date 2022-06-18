@@ -5,16 +5,17 @@ from django.core.exceptions import ValidationError
 User = get_user_model()
 
 
-class CustomUserCreationForm(UserCreationForm):
+class CustomUserChangeForm(UserChangeForm):
     class Meta:
         model = User
         fields = (
             "email",
             "username",
+            "profile_pic",
         )
 
 
-class CustomUserChangeForm(UserChangeForm):
+class CustomUserCreationForm(UserCreationForm):
     error_message = UserCreationForm.error_messages.update(
         {"duplicate_username": "This username has already been taken."}
     )
@@ -24,6 +25,7 @@ class CustomUserChangeForm(UserChangeForm):
         fields = (
             "email",
             "username",
+            "profile_pic",
         )
 
     def clean_username(self):

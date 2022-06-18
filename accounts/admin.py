@@ -15,6 +15,17 @@ class CustomUserAdmin(UserAdmin):
         "email",
         "username",
     ]
+    fieldsets = UserAdmin.fieldsets
+    fieldsets[1][1]["fields"] = fieldsets[1][1]["fields"] + (
+        "country",
+        "profile_pic",
+        "bio",
+    )
+    """
+    fieldsets = UserAdmin.fieldsets + (
+        ('Personal info', {'fields': ('country', 'bio', 'profile_pic',)}),
+                )
+    """
 
 
 admin.site.register(CustomUser, CustomUserAdmin)
