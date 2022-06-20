@@ -208,7 +208,23 @@ class QuestionResultsViewTests(TestCase):
         self.assertContains(response, past_question.question_text)
 
 
-class QuestionModelTests(TestCase):
+class QuestionTests(TestCase):
+    def setUp(self):
+        self.user = get_user_model().objects.create_user(
+            username="johndoe",
+            email="johndoe@example.com",
+            password="secret",
+        )
+
+        self.question = Question.objects.create(
+            question_text="How much wood can a woodchuck chuck?",
+            pub_date=timezone.now(),
+        )
+
+    def test___str__(self):
+        assert self.question.__str__() == self.question.question_text
+        assert str(self.question) == self.question.question_text
+
     def test_was_published_recently_with_old_question(self):
         """
         was_published_recently() returns False for
