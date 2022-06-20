@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.utils import timezone
 
-from ..models import Question
+from ..models import Choice, Question
 
 
 def create_question(question_text, days):
@@ -16,6 +16,26 @@ def create_question(question_text, days):
     """
     time = timezone.now() + datetime.timedelta(days=days)
     return Question.objects.create(question_text=question_text, pub_date=time)
+
+
+def create_choice(question, choice_text, votes):
+    return Choice.objects.create(
+        question=question, choice_text=choice_text, votes=votes
+    )
+
+
+class ChoiceTests(TestCase):
+    def setUp(self):
+        self.question = create_question(
+            question_text="Current question.", days=0
+        )
+        self.choice = create_choice(
+            question=self.question, choice_text="Seven logs", votes=3
+        )
+
+    def test___str__(self):
+        assert self.choice.__str__() == self.choice.choice_text
+        assert str(self.choice) == self.choice.choice_text
 
 
 class QuestionTests(TestCase):
