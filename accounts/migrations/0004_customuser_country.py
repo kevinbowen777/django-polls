@@ -7,13 +7,15 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('accounts', '0003_customuser_profile_pic'),
+        ("accounts", "0003_customuser_profile_pic"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='customuser',
-            name='country',
-            field=django_countries.fields.CountryField(blank=True, max_length=2, verbose_name='Country'),
+            model_name="customuser",
+            name="country",
+            field=django_countries.fields.CountryField(
+                blank=True, max_length=2, verbose_name="Country"
+            ),
         ),
     ]
