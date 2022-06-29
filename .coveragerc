@@ -1,4 +1,5 @@
 [run]
+include = accounts/*, config/*, pages/*, polls/*
 omit =
     */__init__.py,
     *manage.py,
@@ -10,3 +11,4 @@ omit =
     *wsgi.py,
     *conftest.py,
     */extra*
+plugins = django_coverage_plugin
