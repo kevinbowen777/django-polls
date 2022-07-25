@@ -19,6 +19,10 @@ functionality.
  - Navigate to http://127.0.0.1:8000/
 
 ---
+
+### Live Demo on Heroku:
+ - [Polls app](https://kbowen-django-polls.herokuapp.com/)
+
 ### Screenshots
 ![Poll list](https://github.com/kevinbowen777/django_polls/blob/master/images/poll_list.png)
 
