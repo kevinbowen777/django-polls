@@ -11,12 +11,19 @@ functionality.
 ---
 ## Installation
 
- - `git clone git@github.com:kevinbowen777/django_polls.git
+ - `git clone git@github.com:kevinbowen777/django_polls.git`
  - `cd django_polls`
- - `docker-compose up --build`
- - `docker-compose python manage.py migrate`
- - `docker-compose python manage.py createsuperuser`
- - Navigate to http://127.0.0.1:8000/
+ - Local installation:
+     - `poetry shell`
+     - `poetry install`
+     - `python manage.py migrate`
+     - `python manage.py createsuperuser`
+     - `python manage.py runserver`
+ - Docker installation:
+     - `docker-compose up --build`
+     - `docker-compose python manage.py migrate`
+     - `docker-compose python manage.py createsuperuser`
+ - Browse to http://127.0.0.1:8000 or http://127.0.0.1:8000/admin/
 
 ---
 
