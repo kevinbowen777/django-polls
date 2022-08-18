@@ -31,6 +31,7 @@ class UserDetailView(LoginRequiredMixin, DetailView):
 class UserUpdateView(LoginRequiredMixin, UpdateView):
     fields = [
         "name",
+        "age",
         "bio",
         "country",
         "profile_pic",
