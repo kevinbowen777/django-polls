@@ -4,17 +4,13 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.utils import timezone
-from django.views.generic import DetailView, ListView, TemplateView
+from django.views.generic import DetailView, ListView
 
 from .models import Choice, Question
 
 
-class HomePageView(TemplateView):
-    template_name = "polls/home.html"
-
-
-class IndexView(LoginRequiredMixin, ListView):
-    template_name = "polls/index.html"
+class PollListView(LoginRequiredMixin, ListView):
+    template_name = "polls/poll_list.html"
     context_object_name = "latest_question_list"
 
     def get_queryset(self):
@@ -27,9 +23,9 @@ class IndexView(LoginRequiredMixin, ListView):
         )[:5]
 
 
-class DetailView(LoginRequiredMixin, DetailView):
+class PollDetailView(LoginRequiredMixin, DetailView):
     model = Question
-    template_name = "polls/detail.html"
+    template_name = "polls/poll_detail.html"
 
     def get_queryset(self):
         """
@@ -38,9 +34,9 @@ class DetailView(LoginRequiredMixin, DetailView):
         return Question.objects.filter(pub_date__lte=timezone.now())
 
 
-class ResultsView(DetailView, LoginRequiredMixin):
+class PollResultsView(DetailView, LoginRequiredMixin):
     model = Question
-    template_name = "polls/results.html"
+    template_name = "polls/poll_results.html"
 
     def get_queryset(self):
         """
@@ -57,7 +53,7 @@ def vote(request, question_id):
         # Redisplay the question voting form.
         return render(
             request,
-            "polls/detail.html",
+            "polls/poll_detail.html",
             {
                 "question": question,
                 "error_message": "You didn't select a choice.",
@@ -71,4 +67,6 @@ def vote(request, question_id):
         dealing with POST data. This prevents data from being posted
         twice if a user hits the Back Button.
         """
-        return HttpResponseRedirect(reverse("results", args=(question.id,)))
+        return HttpResponseRedirect(
+            reverse("poll_results", args=(question.id,))
+        )

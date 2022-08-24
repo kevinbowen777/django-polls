@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block title %}Poll Results: {{ object.question_text }}{% endblock title %}
+
 {% block content %}
 <div class="container">
   <p>
-    <h2>{{ question.question_text }} - Poll results</h2>
+    <h2>Poll results: {{ question.question_text }}</h2>
     <ul>
     {% for choice in question.choice_set.all %}
       <li>{{ choice.choice_text }} -- {{ choice.votes }}

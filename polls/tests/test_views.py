@@ -28,7 +28,7 @@ class QuestionIndexViewTests(TestCase):
         )
 
     def test_question_index_view_for_logged_out_user(self):
-        response = self.client.get(reverse("polls"))
+        response = self.client.get(reverse("poll_list"))
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(
             response, "%s?next=/polls/" % (reverse("account_login"))
@@ -45,7 +45,7 @@ class QuestionIndexViewTests(TestCase):
         self.client.login(
             email="pollreader@example.com", password="testpass123"
         )
-        response = self.client.get(reverse("polls"))
+        response = self.client.get(reverse("poll_list"))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "No polls are currently available.")
         self.assertQuerysetEqual(response.context["latest_question_list"], [])
@@ -58,7 +58,7 @@ class QuestionIndexViewTests(TestCase):
             email="pollreader@example.com", password="testpass123"
         )
         question = create_question(question_text="Past question.", days=-30)
-        response = self.client.get(reverse("polls"))
+        response = self.client.get(reverse("poll_list"))
         self.assertQuerysetEqual(
             response.context["latest_question_list"],
             [question],
@@ -73,7 +73,7 @@ class QuestionIndexViewTests(TestCase):
             email="pollreader@example.com", password="testpass123"
         )
         create_question(question_text="Future question.", days=30)
-        response = self.client.get(reverse("polls"))
+        response = self.client.get(reverse("poll_list"))
         self.assertQuerysetEqual(response.context["latest_question_list"], [])
 
     def test_future_question_and_past_question(self):
@@ -86,7 +86,7 @@ class QuestionIndexViewTests(TestCase):
         )
         question = create_question(question_text="Past question.", days=-30)
         create_question(question_text="Future question.", days=30)
-        response = self.client.get(reverse("polls"))
+        response = self.client.get(reverse("poll_list"))
         self.assertQuerysetEqual(
             response.context["latest_question_list"],
             [question],
@@ -101,7 +101,7 @@ class QuestionIndexViewTests(TestCase):
         )
         question1 = create_question(question_text="Past question 1.", days=-30)
         question2 = create_question(question_text="Past question 2.", days=-5)
-        response = self.client.get(reverse("polls"))
+        response = self.client.get(reverse("poll_list"))
         self.assertQuerysetEqual(
             response.context["latest_question_list"],
             [question2, question1],
@@ -117,7 +117,7 @@ class QuestionDetailViewTests(TestCase):
         )
 
     def test_question_detail_view_for_logged_out_user(self):
-        response = self.client.get(reverse("polls"))
+        response = self.client.get(reverse("poll_list"))
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(
             response, "%s?next=/polls/" % (reverse("account_login"))
@@ -138,7 +138,7 @@ class QuestionDetailViewTests(TestCase):
         future_question = create_question(
             question_text="Future question.", days=5
         )
-        url = reverse("detail", args=(future_question.id,))
+        url = reverse("poll_detail", args=(future_question.id,))
         response = self.client.get(url)
         self.assertEqual(response.status_code, 404)
 
@@ -153,7 +153,7 @@ class QuestionDetailViewTests(TestCase):
         past_question = create_question(
             question_text="Past question.", days=-5
         )
-        url = reverse("detail", args=(past_question.id,))
+        url = reverse("poll_detail", args=(past_question.id,))
         response = self.client.get(url)
         self.assertContains(response, past_question.question_text)
 
@@ -167,7 +167,7 @@ class QuestionResultsViewTests(TestCase):
         )
 
     def test_question_results_view_for_logged_out_user(self):
-        response = self.client.get(reverse("polls"))
+        response = self.client.get(reverse("poll_list"))
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(
             response, "%s?next=/polls/" % (reverse("account_login"))
@@ -188,7 +188,7 @@ class QuestionResultsViewTests(TestCase):
         future_question = create_question(
             question_text="Future question.", days=5
         )
-        url = reverse("results", args=(future_question.id,))
+        url = reverse("poll_results", args=(future_question.id,))
         response = self.client.get(url)
         self.assertEqual(response.status_code, 404)
 
@@ -203,6 +203,6 @@ class QuestionResultsViewTests(TestCase):
         past_question = create_question(
             question_text="Past question.", days=-5
         )
-        url = reverse("results", args=(past_question.id,))
+        url = reverse("poll_results", args=(past_question.id,))
         response = self.client.get(url)
         self.assertContains(response, past_question.question_text)

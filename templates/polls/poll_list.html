@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block title %}Polls List{% endblock title %}
+
 {% block content %}
 <div class="container">
   <p>
@@ -9,12 +11,12 @@
     <ul>
     {% for question in latest_question_list %}
       <li>
-        <a href="{% url 'detail' question.id %}">{{ question.question_text }}</a>
+        <a href="{% url 'poll_detail' question.id %}">{{ question.question_text }}</a>
       </li>
     {% endfor %}
     </ul>
     {% else %}
-    <p>No polls are currently available.</p>
+    <p class="text-muted"><em>No polls are currently available.</em></p>
   {% endif %}
   </p>
 </div>
