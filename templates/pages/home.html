@@ -1,24 +1,21 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Django Polls - Home{% endblock title %}
+{% block title %}Welcome{% endblock title %}
 
 
 {% block content %}
-<div class="container">
+<div class="jumbotron">
   <p>
-  <h2>Homepage of Django Polls</h2>
-  {% if user.is_authenticated %}
-    <p>Hi {{ user.name }}!</p>
-    {% if user.profile_pic %}
-      <img class="profile_pic" src="{{ user.profile_pic.url }}" alt="{{ user.name }}">
+  <h2 class="display-6">Django Polls app</h2>
+  <p class="lead">A polling website build with Django</p>
+    {% if user.is_authenticated %}
+      <p class="text-muted"><em>Hello {{ user.name }}!</em></p>
+        <a class="btn btn-primary btn-lg" href="{% url 'polls' %}" role="button">View All Polls &raquo;</a>
     {% else %}
-      <img class="greeting" src="{% static 'images/binturong.jpg' %}">
+      <p class="text-muted"><em>You are not logged in</em></p>
+        <a class="btn btn-primary btn-lg" href="{% url 'account_signup' %}" role="button">Register &raquo;</a>
     {% endif %}
-  {% else %}
-    <p>You are not logged in</p>
-    <img class="greeting" src="{% static 'images/burroughs.jpg' %}">
-  {% endif %}
   </p>
 </div>
 {% endblock content %}
