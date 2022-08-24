@@ -1,13 +1,13 @@
-{% extends 'base.html' %}
+{% extends "account/base.html" %}
 {% load i18n %}
 {% load account %}
 
-{% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
+{% block title %}{% trans "Confirm E-mail Address" %}{% endblock title %}
 
-{% block content %}
+{% block inner %}
 <div class="container">
   <p>
-  <h1>{% trans "Confirm E-mail Address" %}</h1>
+  <h2>{% trans "Confirm E-mail Address" %}</h2>
   {% if confirmation %}
     {% user_display confirmation.email_address.user as user_display %}
     <p>{% blocktrans with confirmation.email_address.email as email %}Please confirm
@@ -23,4 +23,4 @@
     {% endif %}
   </p>
 </div>
-{% endblock content %}
+{% endblock inner %}
