@@ -1,9 +1,9 @@
-{% extends "base.html" %}
+{% extends "account/base.html" %}
 {% load static %}
 
 {% block title %}Poll Question: {{ object.question_text }}{% endblock title %}
 
-{% block content %}
+{% block inner %}
 <div class="container">
   <p>
   <form action="{% url 'vote' question.id %}" method="post">
@@ -26,4 +26,4 @@
   </form>
   </p>
 </div>
-{% endblock content %}
+{% endblock inner %}

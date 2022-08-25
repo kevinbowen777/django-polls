@@ -1,9 +1,9 @@
-{% extends "base.html" %}
+{% extends "account/base.html" %}
 {% load static %}
 
 {% block title %}Polls List{% endblock title %}
 
-{% block content %}
+{% block inner %}
 <div class="container">
   <p>
   {% if latest_question_list %}
@@ -20,4 +20,4 @@
   {% endif %}
   </p>
 </div>
-{% endblock content %}
+{% endblock inner %}

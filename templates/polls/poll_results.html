@@ -1,9 +1,9 @@
-{% extends "base.html" %}
+{% extends "account/base.html" %}
 {% load static %}
 
 {% block title %}Poll Results: {{ object.question_text }}{% endblock title %}
 
-{% block content %}
+{% block inner %}
 <div class="container">
   <p>
     <h2>Poll results: {{ question.question_text }}</h2>
@@ -15,4 +15,4 @@
     </ul>
   </p>
 </div>
-{% endblock content %}
+{% endblock inner %}

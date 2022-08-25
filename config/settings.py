@@ -131,7 +131,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # django-allauth config
-LOGIN_REDIRECT_URL = "polls"
+LOGIN_REDIRECT_URL = "poll_list"
 LOGOUT_REDIRECT_URL = "home"
 SITE_ID = 1
 AUTHENTICATION_BACKENDS = (
