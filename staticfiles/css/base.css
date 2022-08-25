@@ -21,9 +21,6 @@ li {
   font-family: Helvetica, "Times New Roman", sans-serif;
   font-size: 18px;
 }
-body {
-  background: white url("../images/background.jpg") repeat;
-}
 .greeting {
   height: auto;
   width: 150px;
