@@ -1,4 +1,14 @@
-## django_polls - A basic poll application using the Django web framework
+## django_polls 
+
+<div align="center">
+
+  [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
+  [![GitHub Issues](https://img.shields.io/github/issues/kevinbowen777/django_polls.svg)](https://github.com/kevinbowen777/django_polls/issues)
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
+</div>
+
+- A basic poll application using the Django web framework
 
 This repository contains a polling application demonstrating basic Django
 functionality.
