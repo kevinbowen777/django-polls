@@ -1,8 +1,8 @@
-## django_polls 
+## django_polls
 
 <div align="center">
 
-  [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
+  [![Status](https://img.shields.io/badge/status-active-success.svg)]()
   [![GitHub Issues](https://img.shields.io/github/issues/kevinbowen777/django_polls.svg)](https://github.com/kevinbowen777/django_polls/issues)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
@@ -13,10 +13,16 @@
 This repository contains a polling application demonstrating basic Django
 functionality.
 
+---
+
+###Features
+
  - A public site that lets people view polls and vote in them.
  - An admin site for adding, changing, and deleting polls.
- - User sign up with email validation
- - 3rd party sign-in integration with GitHub
+ - User registration with email verification & social(GitHub) login
+ - Bootstrap4 & crispy-forms decorations
+ - Customizable user profiles with bio, profile picture & country flags
+ - Nox testing sessions (black, linting, pytest, coverage, Sphinx doc generation)
 
 ---
 ## Installation
