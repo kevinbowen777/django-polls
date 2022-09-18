@@ -10,9 +10,17 @@
 
 - A basic poll application using the Django web framework
 
+##### Table of Contents
+ - [Features](#features)
+ - [Installation](#installation)
+ - [Testing](#testing)
+ - [Application Demo](#application-demo)
+ - [Screenshots](#screenshots)
+ - [Reporting Bugs](#reporting-bugs)
+
 ---
 
-###Features
+### Features
 
  - Application
      - A public site that lets people view polls and vote in them.
@@ -20,8 +28,6 @@
      - User registration with email verification & social(GitHub) login
      - Bootstrap4 & crispy-forms decorations
      - Customizable user profile pages with bio, profile pic, & country flags
-     - image carousel
-     - pagination template
  - Dev/testing
      - basic module testing templates
      - Coverage reports
@@ -30,7 +36,7 @@
      - `shell_plus` with IPython via `django-extensions` package
      - Nox testing sessions for latest Python 3.9, 3.10, and 3.11
          - black
-         - Sphinx documentaion generations
+         - Sphinx documentaion generation
          - linting
              - flake8
              - flake8-bugbear
@@ -40,9 +46,10 @@
          - pytest sessions with coverage
 
 ---
-## Installation
 
- - `git clone git@github.com:kevinbowen777/django_polls.git`
+### Installation
+
+ - `git clone https://github.com/kevinbowen777/django_polls.git`
  - `cd django_polls`
  - Local installation:
      - `poetry shell`
@@ -57,6 +64,7 @@
  - Browse to http://127.0.0.1:8000 or http://127.0.0.1:8000/admin/
 
 ---
+
 ### Testing
  - `docker-compose exec web python manage.py test`
  - `coverage run -m pytest`
@@ -65,8 +73,12 @@
      - e.g. `nox`, `nox -rs lint-3.11`, `nox -s tests`
 
 ---
-### Live Demo on Heroku:
+
+### Application Demo
+A live application demonstration hosted at Heroku
  - [Polls app](https://kbowen-django-polls.herokuapp.com/)
+
+---
 
 ### Screenshots
 ![Poll list](https://github.com/kevinbowen777/django_polls/blob/master/images/poll_list.png)
@@ -77,8 +89,7 @@
 ![Poll results](https://github.com/kevinbowen777/django_polls/blob/master/images/poll_results.png)
 
 ---
-[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kevinbowen777/django_polls/blob/master/LICENSE)
----
+
 ### Reporting Bugs
 
    Visit the [Issues page](https://github.com/kevinbowen777/django_polls/issues)

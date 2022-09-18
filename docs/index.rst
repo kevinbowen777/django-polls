@@ -7,6 +7,11 @@ django_polls
 
    license
 
+.. contents:: Table of Contents
+   :local:
+   :backlinks: top
+   :depth: 2
+
 A basic poll application using the Django web framework
 
 Features
@@ -19,8 +24,6 @@ Features
    * User registration with email verification & social(GitHub) login
    * Bootstrap4 & crispy-forms decorations
    * Customizable user profile pages with bio, profile pic, & country flags
-   * image carousel
-   * pagination template
  * Dev/testing
 
    * basic module testing templates
@@ -31,7 +34,7 @@ Features
    * Nox testing sessions for latest Python 3.9, 3.10, and 3.11
 
      * black
-     * Sphinx documentaion generations
+     * Sphinx documentaion generation
      * linting
        
        * flake8
@@ -39,7 +42,7 @@ Features
        * flake8-docstrings
        * flake8-import-order
        * safety(python package vulnerability testing)
-       * pytest sessions with coverage
+     * pytest sessions with coverage
 
 
 Installation
@@ -53,8 +56,8 @@ run this command in your terminal:
    $ git clone https://github.com/kevinbowen777/django_polls.git
    $ cd django_polls
 
-Local install:
---------------
+Local installation
+------------------
 
 .. code-block:: console
 
@@ -64,8 +67,8 @@ Local install:
    $ python manage.py createsuperuser
 
 
-Docker install:
----------------
+Docker installation
+-------------------
 
 .. code-block:: console
 
@@ -98,8 +101,10 @@ Testing
    $ nox -rs lint-3.11
    $ nox -s tests
 
-Live Application Demonstration on Heroku
-----------------------------------------
+Application Demo
+----------------
+Live demonstration of application running on Heroku:
+
 `kbowen-django_polls <https://kbowen-django-polls.herokuapp.com/>`_
 
 Reporting Bugs
