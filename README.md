@@ -1,9 +1,9 @@
-## django_polls
+## django-polls
 
 <div align="center">
 
   [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-  [![GitHub Issues](https://img.shields.io/github/issues/kevinbowen777/django_polls.svg)](https://github.com/kevinbowen777/django_polls/issues)
+  [![GitHub Issues](https://img.shields.io/github/issues/kevinbowen777/django-polls.svg)](https://github.com/kevinbowen777/django-polls/issues)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
@@ -49,8 +49,8 @@
 
 ### Installation
 
- - `git clone https://github.com/kevinbowen777/django_polls.git`
- - `cd django_polls`
+ - `git clone https://github.com/kevinbowen777/django-polls.git`
+ - `cd django-polls`
  - Local installation:
      - `poetry shell`
      - `poetry install`
@@ -81,16 +81,16 @@ A live application demonstration hosted at Heroku
 ---
 
 ### Screenshots
-![Poll list](https://github.com/kevinbowen777/django_polls/blob/master/images/poll_list.png)
+![Poll list](https://github.com/kevinbowen777/django-polls/blob/master/images/poll_list.png)
 
-![Poll detail](https://github.com/kevinbowen777/django_polls/blob/master/images/poll_detail.png)
+![Poll detail](https://github.com/kevinbowen777/django-polls/blob/master/images/poll_detail.png)
 
 
-![Poll results](https://github.com/kevinbowen777/django_polls/blob/master/images/poll_results.png)
+![Poll results](https://github.com/kevinbowen777/django-polls/blob/master/images/poll_results.png)
 
 ---
 
 ### Reporting Bugs
 
-   Visit the [Issues page](https://github.com/kevinbowen777/django_polls/issues)
+   Visit the [Issues page](https://github.com/kevinbowen777/django-polls/issues)
       to view currently open bug reports or open a new issue.
