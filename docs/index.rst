@@ -110,4 +110,4 @@ Live demonstration of application running on Heroku:
 Reporting Bugs
 --------------
 
-Visit the django_polls `Issues page <https://github.com/kevinbowen777/django_polls/issues>`_ on GitHub.
+Visit the django_polls `Issues page <https://github.com/kevinbowen777/django-polls/issues>`_ on GitHub.
