@@ -29,6 +29,7 @@ export WEB_CONCURRENCY=1
 #export PYTHON_MAX_THREADS=1
 
 export SECRET_KEY=<secret_key>
+# python -c 'import secrets; print(secrets.token_urlsafe(38))'
 # Uncomment the following three lines to run a sqlite3 db locally.
 # ENGINE_DB=django.db.backends.sqlite3
 # DATABASE_URL=sqlite:///django-polls.sqlite3
