@@ -25,7 +25,7 @@
  - Application
      - A public site that lets people view polls and vote in them.
      - An admin site for adding, changing, and deleting polls.
-     - User registration with email verification & social(GitHub) login
+     - User registration with email verification & social(GitHub) login using [django-allauth](https://pypi.org/project/django-allauth/)
      - [Bootstrap4](https://pypi.org/project/django-bootstrap4/) & [crispy-forms](https://pypi.org/project/django-crispy-forms/) decorations
      - Customizable user profile pages with bio, profile pic, & [country flags](https://pypi.python.org/pypi/django-countries)
      - For additional links to package resources used in this repository, see the [Package Index](docs/package_index.md)
