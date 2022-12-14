@@ -89,18 +89,19 @@
 ---
 
 ### Application Demo
-A live application demonstration hosted at Heroku
- - [Polls app](https://kbowen-django-polls.herokuapp.com/)
+A live application demonstration:
+
+TBD
 
 ---
 
 ### Screenshots
-![Poll list](https://github.com/kevinbowen777/django-polls/blob/master/images/poll_list.png)
+![Poll list](images/poll_list.png)
 
-![Poll detail](https://github.com/kevinbowen777/django-polls/blob/master/images/poll_detail.png)
+![Poll detail](images/poll_detail.png)
 
 
-![Poll results](https://github.com/kevinbowen777/django-polls/blob/master/images/poll_results.png)
+![Poll results](images/poll_results.png)
 
 ---
 
