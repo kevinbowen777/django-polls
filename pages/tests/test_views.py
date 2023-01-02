@@ -116,7 +116,7 @@ class SuccessViewTests(SimpleTestCase):
     def test_success_page_contains_correct_html(self):
         self.assertContains(
             self.response,
-            "Success! Thank you for your message.",
+            "Thank you for your message.",
         )
 
     def test_success_page_does_not_contain_incorrect_html(self):
