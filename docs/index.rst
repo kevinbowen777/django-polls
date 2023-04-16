@@ -13,7 +13,7 @@ django_polls
    :backlinks: top
    :depth: 2
 
-A basic poll application using the Django web framework
+A basic poll application using the Django 4.2.x web framework
 
 Features
 --------
