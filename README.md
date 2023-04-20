@@ -105,11 +105,20 @@ TBD
 ---
 
 ### Screenshots
-![Poll list](images/poll_list.png)
 
-![Poll detail](images/poll_detail.png)
+### Home
+![Home](images/django-polls_homepage.png)
 
+### Login Page
+![Login Page](images/django-polls_signin.png)
 
+### Poll List
+![Poll List](images/django-polls_poll_list.png)
+
+### Poll Options
+![Poll Options](images/django-polls_poll_list.png)
+
+### Poll Results
 ![Poll results](images/poll_results.png)
 
 ---
