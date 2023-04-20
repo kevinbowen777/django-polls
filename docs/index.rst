@@ -7,6 +7,8 @@ django_polls
 
    license
    package_index
+   create_new_users
+   add_polls_list
 
 .. contents:: Table of Contents
    :local:
