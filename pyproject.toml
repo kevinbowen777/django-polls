@@ -43,7 +43,7 @@ show_missing = true
 
 [tool.poetry]
 name = "django-polls"
-version = "0.1.0"
+version = "0.2.0"
 description = "A basic poll application built with Django"
 authors = [
     "Kevin Bowen <kevin.bowen@gmail.com>",
