@@ -10,7 +10,7 @@
   <p>
     <h2>{% trans "E-mail Addresses" %}</h2>
     {% if user.emailaddress_set.all %}
-    <p>{% trans 'The following e-mail addresses are associated with your account:' %}</p>
+    <p>{% trans "The following e-mail addresses are associated with your account:" %}</p>
 
     <form action="{% url 'account_email' %}" class="email_list" method="post">
     {% csrf_token %}
@@ -34,9 +34,9 @@
     {% endfor %}
 
     <div class="buttonHolder">
-      <button class="btn btn-success secondaryAction" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
-      <button class="btn btn-info secondaryAction" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
-      <button class="btn btn-danger primaryAction" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
+      <button class="btn btn-success secondaryAction" type="submit" name="action_primary" >{% trans "Make Primary' %}</button>
+      <button class="btn btn-info secondaryAction" type="submit" name="action_send" >{% trans "Re-send Verification" %}</button>
+      <button class="btn btn-danger primaryAction" type="submit" name="action_remove" >{% trans "Remove" %}</button>
     </div>
 
     </fieldset>
@@ -62,7 +62,6 @@
   </p>
 </div>
 {% endblock inner %}
-
 
 {% block extra_body %}
 <script type="text/javascript">
