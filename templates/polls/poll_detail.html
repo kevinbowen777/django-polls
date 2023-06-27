@@ -1,29 +1,35 @@
 {% extends "account/base.html" %}
 {% load static %}
 
-{% block title %}Poll Question: {{ object.question_text }}{% endblock title %}
+{% block title %}
+  Poll Question: {{ object.question_text }}
+{% endblock title %}
 
 {% block inner %}
-<div class="container">
-  <p>
-  <form action="{% url 'vote' question.id %}" method="post">
-  {% csrf_token %}
-  <fieldset>
-    <legend>
-      <h2>{{ question.question_text }}</h2>
-    </legend>
-    {% if error_message %}
-      <p>
-        <strong>{{ error_message }}</strong>
-      </p>
-    {% endif %}
-    {% for choice in question.choice_set.all %}
-      <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
-    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
-    {% endfor %}
-  </fieldset>
-  <button class="btn btn-success" type="submit">Vote</button>
-  </form>
-  </p>
-</div>
+  <div class="container">
+    <p>
+      <form action="{% url 'vote' question.id %}" method="post">
+        {% csrf_token %}
+        <fieldset>
+          <legend>
+            <h2>{{ question.question_text }}</h2>
+          </legend>
+          {% if error_message %}
+            <p>
+              <strong>{{ error_message }}</strong>
+            </p>
+          {% endif %}
+          {% for choice in question.choice_set.all %}
+            <input type="radio"
+                   name="choice"
+                   id="choice{{ forloop.counter }}"
+                   value="{{ choice.id }}">
+            <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
+            <br>
+          {% endfor %}
+        </fieldset>
+        <button class="btn btn-success" type="submit">Vote</button>
+      </form>
+    </p>
+  </div>
 {% endblock inner %}

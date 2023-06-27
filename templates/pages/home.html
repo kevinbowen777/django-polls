@@ -1,20 +1,30 @@
 {% extends "account/base.html" %}
 {% load static %}
 
-{% block title %}Welcome{% endblock title %}
+{% block title %}
+  Welcome
+{% endblock title %}
 
 {% block inner %}
-<div class="jumbotron">
-  <p>
-  <h2 class="display-6">Django Polls app</h2>
-  <p class="lead">A polling website build with Django</p>
-    {% if user.is_authenticated %}
-      <p class="text-muted"><em>Hello {{ user.name }}!</em></p>
-        <a class="btn btn-primary btn-lg" href="{% url 'poll_list' %}" role="button">View All Polls »</a>
-    {% else %}
-      <p class="text-muted"><em>You are not logged in</em></p>
-        <a class="btn btn-primary btn-lg" href="{% url 'account_signup' %}" role="button">Register »</a>
-    {% endif %}
-  </p>
-</div>
+  <div class="jumbotron">
+    <p>
+      <h2 class="display-6">Django Polls app</h2>
+      <p class="lead">A polling website build with Django</p>
+      {% if user.is_authenticated %}
+        <p class="text-muted">
+          <em>Hello {{ user.name }}!</em>
+        </p>
+        <a class="btn btn-primary btn-lg"
+           href="{% url 'poll_list' %}"
+           role="button">View All Polls »</a>
+      {% else %}
+        <p class="text-muted">
+          <em>You are not logged in</em>
+        </p>
+        <a class="btn btn-primary btn-lg"
+           href="{% url 'account_signup' %}"
+           role="button">Register »</a>
+      {% endif %}
+    </p>
+  </div>
 {% endblock inner %}
