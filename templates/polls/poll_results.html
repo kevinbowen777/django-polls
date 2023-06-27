@@ -1,18 +1,22 @@
 {% extends "account/base.html" %}
 {% load static %}
 
-{% block title %}Poll Results: {{ object.question_text }}{% endblock title %}
+{% block title %}
+  Poll Results: {{ object.question_text }}
+{% endblock title %}
 
 {% block inner %}
-<div class="container">
-  <p>
-    <h2>Poll results: {{ question.question_text }}</h2>
-    <ul>
-    {% for choice in question.choice_set.all %}
-      <li>{{ choice.choice_text }} -- {{ choice.votes }}
-        vote{{ choice.votes|pluralize }}</li>
-    {% endfor %}
-    </ul>
-  </p>
-</div>
+  <div class="container">
+    <p>
+      <h2>Poll results: {{ question.question_text }}</h2>
+      <ul>
+        {% for choice in question.choice_set.all %}
+          <li>
+            {{ choice.choice_text }} -- {{ choice.votes }}
+            vote{{ choice.votes|pluralize }}
+          </li>
+        {% endfor %}
+      </ul>
+    </p>
+  </div>
 {% endblock inner %}
