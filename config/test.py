@@ -6,8 +6,8 @@ from .settings import *  # noqa
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 # SECRET_KEY = env(
-#     "DJANGO_SECRET_KEY",
-#     default="!!!SET DJANGO_SECRET_KEY!!!",
+#     "SECRET_KEY",
+#     default="!!!SET SECRET_KEY!!!",
 # )
 # https://docs.djangoproject.com/en/dev/ref/settings/#test-runner
 TEST_RUNNER = "django.test.runner.DiscoverRunner"
@@ -31,8 +31,8 @@ PASSWORD_HASHERS = ["django.contrib.auth.hashers.MD5PasswordHasher"]
 # ------------------------------------------------------------------------------
 # TODO: Investigate why tests fail when section enabled - 20220621
 # APP_DIRS needs to be set to 'False' in config/settings.py to
-# use this section - 20220629
-TEMPLATES[-1]["OPTIONS"]["loaders"] = [  # type: ignore[index] # noqa: F405
+# use this section - 20230729
+TEMPLATES[-1]["OPTIONS"]["loaders"] = [  # noqa: F405
     (
         "django.template.loaders.cached.Loader",
         [
@@ -41,6 +41,8 @@ TEMPLATES[-1]["OPTIONS"]["loaders"] = [  # type: ignore[index] # noqa: F405
         ],
     )
 ]
+# The following is being used in updated django-cookiecutter
+# TEMPLATES[0]["OPTIONS"]["debug"] = True  # noqa: F405
 
 # EMAIL
 # ------------------------------------------------------------------------------
