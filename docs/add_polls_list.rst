@@ -11,7 +11,7 @@ Instructions
 ------------
 
 Sample polls list
------------------
+^^^^^^^^^^^^^^^^^
 
   * When did Columbus 'sail the ocean blue'?
 
