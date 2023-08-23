@@ -3,9 +3,9 @@ project = "django-polls"
 author = "Kevin Bowen"
 copyright = f"2023, {author}"
 #
-html_theme = 'furo'
-html_logo = 'django_24.png'
-html_title = 'django-polls'
+html_theme = "furo"
+html_logo = "django_24.png"
+html_title = "django-polls"
 extensions = [
-    'sphinx.ext.duration',
+    "sphinx.ext.duration",
 ]
