@@ -65,6 +65,7 @@ function cov:html {
   # Output coverage report to ./htmlcov
   # cmd coverage html "${@}"
   cmd coverage html "${@}"
+  coverage html "${@}"
 }
 
 function down {
@@ -129,10 +130,8 @@ function nox:all {
 
 function poe:old {
   # List any installed packages that are outdated
-  poetry show -ol
-  # The following command runs twice as fast; but, requires the container
-  # to be running:
   # cmd poetry show -ol
+  poetry show -ol
 }
 
 function poe:up {
