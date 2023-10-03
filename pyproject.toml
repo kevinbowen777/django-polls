@@ -68,7 +68,7 @@ factory-boy = "^3.2.0"
 django-coverage-plugin = "^3.0.0"
 ruff = ">= 0.0.275, < 0.0.300"
 djlint = "^1.31.1"
-werkzeug = "^2.3.6"
+werkzeug = "^3.0"
 pyopenssl = "^23.2.0"
 sphinx = ">= 7.2.5, < 7.3.0"
 furo = "^2023.5.20"
@@ -137,7 +137,7 @@ exclude = ["**/tests",
 ignore = ["docs/_build"]
 defineConstant = { DEBUG = true }
 stubPath = ""
-venv = "django-polls-jbCb7Rnz-py3.11"
+venv = "django-polls-jbCb7Rnz-py3.12"
 venvPath = "../../../venvs"
 
 typeCheckingMode = "basic"
@@ -156,11 +156,11 @@ reportUnnecessaryCast = "warning"
 reportUnnecessaryComparison = "error"
 reportUnnecessaryTypeIgnoreComment = "warning"
 
-pythonVersion = "3.11"
+pythonVersion = "3.12"
 pythonPlatform = "Linux"
 
 executionEnvironments = [
-  { root = ".", pythonVersion = "3.11", extraPaths = [ "accounts", "config", "pages", "polls" ] },
+  { root = ".", pythonVersion = "3.12", extraPaths = [ "accounts", "config", "pages", "polls" ] },
 ]
 
 [tool.pytest.ini_options]
@@ -227,8 +227,8 @@ line-length = 88
 # Allow unused variables when underscore-prefixed.
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
-# Assume Python 3.11.
-target-version = "py311"
+# Assume Python 3.12.
+target-version = "py312"
 
 [tool.ruff.per-file-ignores]
 # "accounts/tests/factories.py" = ["BLK100"] (Not supported)
