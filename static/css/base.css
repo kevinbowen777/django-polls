@@ -26,6 +26,11 @@ li {
   width: 150px;
 }
 
+.jumbotron {
+  border-radius: 25px;
+  margin-top: 25px;
+}
+
 .profile_pic {
   height: 300px;
   width: auto;
