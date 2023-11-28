@@ -65,7 +65,7 @@ nox = "^2023.4.22"
 safety = "2.4.0b2"
 factory-boy = "^3.2.0"
 django-coverage-plugin = "^3.0.0"
-ruff = ">= 0.0.275, < 0.0.300"
+ruff = "^0.1.0"
 djlint = "^1.31.1"
 werkzeug = "^3.0"
 pyopenssl = "^23.2.0"
@@ -175,6 +175,8 @@ filterwarnings = [
 ]
 
 [tool.ruff]
+preview = true
+unsafe-fixes = false
 select = [
     "B",    # flake8-bugbear
     "C90",  # mccabe
