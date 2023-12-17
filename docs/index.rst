@@ -1,7 +1,7 @@
 Django Polls
 ============
 
-The django-polls_ project is a basic poll application and is part of the collection of `Web Framework Projects`_ . This repository runs a Django 4.2.x application demonstrating some of the basic Django functionality.
+The django-polls_ project is a basic poll application and is part of the collection of `Web Framework Projects`_ . This repository runs a Django 5.0.x application demonstrating some of the basic Django functionality.
 
 .. _django-polls: https://github.com/kevinbowen777/django-polls
 .. _Web Framework Projects: https://github.com/kevinbowen777/web-project-index
