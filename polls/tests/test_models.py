@@ -26,9 +26,7 @@ def create_choice(question, choice_text, votes):
 
 class ChoiceTests(TestCase):
     def setUp(self):
-        self.question = create_question(
-            question_text="Current question.", days=0
-        )
+        self.question = create_question(question_text="Current question.", days=0)
         self.choice = create_choice(
             question=self.question, choice_text="Seven logs", votes=3
         )
@@ -45,9 +43,7 @@ class QuestionTests(TestCase):
             email="johndoe@example.com",
             password="secret",
         )
-        self.question = create_question(
-            question_text="Current question.", days=0
-        )
+        self.question = create_question(question_text="Current question.", days=0)
 
         """
         self.question = Question.objects.create(
@@ -74,9 +70,7 @@ class QuestionTests(TestCase):
         was_published_recently() returns True for
         questions whose pub_date is within the last day.
         """
-        time = timezone.now() - datetime.timedelta(
-            hours=23, minutes=59, seconds=59
-        )
+        time = timezone.now() - datetime.timedelta(hours=23, minutes=59, seconds=59)
         recent_question = Question(pub_date=time)
         self.assertIs(recent_question.was_published_recently(), True)
 
