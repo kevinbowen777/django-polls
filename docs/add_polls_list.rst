@@ -22,7 +22,7 @@ Sample polls list
     * Who is Columbus?
 
   * Who was the fifth Beatle?
-    
+
     * Billy Preston
     * Murray the K
     * George Martin
