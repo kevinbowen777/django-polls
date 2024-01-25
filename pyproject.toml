@@ -37,10 +37,10 @@ classifiers = [
 python = "^3.10"
 Django = "5.0.1"
 
-environs = { version = "^10.0", extras = ["django"] }
+django-allauth = ">=0.60, < 0.61"
+environs = { version = "^10", extras = ["django"] }
 django-crispy-forms = "^2.0"
 django-extensions = "^3.1.5"
-django-allauth = ">=0.54.0, < 0.60.0"
 psycopg2-binary = "^2.9.5"
 Pillow = "^10.0"
 django-countries = "^7.3.2"
@@ -61,7 +61,7 @@ ipython = "^8.4.0"
 friendly = "^0.7.0"
 colorama = "^0.4.4"
 nox = "^2023.4.22"
-safety = "2.4.0b2"
+safety = "^3.0"
 factory-boy = "^3.2.0"
 django-coverage-plugin = "^3.0.0"
 ruff = "^0.1.0"
