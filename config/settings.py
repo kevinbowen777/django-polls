@@ -1,4 +1,5 @@
 """Settings for the django-polls project."""
+
 from pathlib import Path
 
 # import socket  # Comment out if not using debug_toolbar
