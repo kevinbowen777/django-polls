@@ -5,8 +5,7 @@ import tempfile
 import nox
 
 PYTHON_VERSIONS = ["3.12", "3.11", "3.10"]
-
-nox.options.sessions = "lint", "safety", "tests"
+nox.options.sessions = "lint", "coverage", "safety", "tests"
 locations = (
     "accounts",
     "config",
@@ -18,8 +17,7 @@ locations = (
 
 
 def install_with_constraints(session, *args, **kwargs):
-    """
-    Install packages constrained by Poetry's lock file.
+    """Install packages constrained by Poetry's lock file.
 
     This function is a wrapper for nox.sessions.install. It
     invokes pip to install packages inside of the session's virtualenv.
@@ -53,6 +51,17 @@ def black(session):
     args = session.posargs or locations
     install_with_constraints(session, "black")
     session.run("black", *args)
+
+
+@nox.session(python=PYTHON_VERSIONS)
+def coverage(session):
+    """Build JSON coverage report."""
+    install_with_constraints(session, "coverage")
+    session.run("coverage", "run", "-p", "-m", "pytest")
+    session.run("coverage", "combine")
+    session.run("coverage", "report", "-m", "--skip-covered")
+    session.run("coverage", "json", "-o", "htmlcov/coverage.json")
+    session.run("coverage", "html")
 
 
 @nox.session(python=PYTHON_VERSIONS)
