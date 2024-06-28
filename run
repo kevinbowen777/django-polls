@@ -92,6 +92,14 @@ function nox:cov {
   nox -s coverage-3.12 "${@}"
 }
 
+function nox:cov-re-all {
+  # Check code for test coverage (all versions/re-use venvs)
+  # cmd nox -s coverage-3.12 "${@}"
+  nox -rs coverage-3.12 "${@}"
+  nox -rs coverage-3.11 "${@}"
+  nox -rs coverage-3.10 "${@}"
+}
+
 function nox:docs {
   # Create Sphinx documentation in ./docs/_build directory
   # cmd nox -s docs-3.12 "${@}"
