@@ -42,9 +42,9 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10"
-Django = "5.0.9"
+Django = "5.1.1"
 
-django-allauth = ">=0.60.0, < 0.70"
+django-allauth = ">=65.0, <66.0.0"
 environs = { version = "^11", extras = ["django"] }
 django-extensions = "^3.2"
 whitenoise = "^6.1.0"
