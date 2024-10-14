@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-polls"
-version = "0.3.0"
+version = "0.3.1"
 description = "A basic poll application built with Django"
 authors = [
     "Kevin Bowen <kevin.bowen@gmail.com>",
@@ -35,6 +35,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Internet :: WWW/HTTP",
 ]
 
@@ -138,7 +139,7 @@ ignore = ["docs/_build"]
 defineConstant = { DEBUG = true }
 stubPath = ""
 # The following may need to be modified when collaborating with others
-venv = "django-polls-jbCb7Rnz-py3.12"
+venv = "django-polls-jbCb7Rnz-py3.13"
 venvPath = "../../../venvs"
 # More portable venv config
 # venvPath = "."
@@ -160,11 +161,11 @@ reportUnnecessaryCast = "warning"
 reportUnnecessaryComparison = "error"
 reportUnnecessaryTypeIgnoreComment = "warning"
 
-pythonVersion = "3.12"
+pythonVersion = "3.13"
 pythonPlatform = "Linux"
 
 executionEnvironments = [
-  { root = ".", pythonVersion = "3.12", extraPaths = [ "accounts", "config", "pages", "polls" ] },
+  { root = ".", pythonVersion = "3.13", extraPaths = [ "accounts", "config", "pages", "polls" ] },
 ]
 
 [tool.pytest.ini_options]
@@ -187,7 +188,7 @@ unsafe-fixes = false
 line-length = 88
 indent-width = 4
 
-# Assume Python 3.12.x
+# Assume Python 3.13.x
 target-version = "py312"
 
 # Exclude a variety of commonly ignored directories.
