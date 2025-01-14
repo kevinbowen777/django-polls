@@ -4,7 +4,7 @@ version = "0.3.2"
 description = "A basic poll application built with Django"
 requires-python = ">=3.10.0, <3.14.0"
 dependencies = [
-    "Django  (==5.1.4)",
+    "Django (==5.1.4)",
     "django-allauth (>=65.0, <66.0.0)",
     "environs[django] (>=11.0, <15.0)",
     "django-extensions (>=3.2.0, <3.3.0)",
@@ -17,9 +17,8 @@ dependencies = [
     "django-crispy-forms (>=2.0, <2.4)",
     "django-countries (>=7.3.2, <7.7.0)",
 ]
-
 authors = [
-    { name = "Kevin Bowen", email =  "kevin.bowen@gmail.com" },
+    { name = "Kevin Bowen", email = "kevin.bowen@gmail.com" },
 ]
 maintainers = [
 ]
@@ -54,25 +53,28 @@ Repository = "https://github.com/kevinbowen777/django-polls.git"
 Documentation = "file:///docs/index.rst"
 
 [tool.poetry.group.dev.dependencies]
-django-debug-toolbar = "^4.0.0"
+django-debug-toolbar = ">=4.0.0, <5.0.0"
 pre-commit = ">=4.0, <5.0"
 ruff = ">=0.8, <1.0"
 nox = "2024.10.09"
-pytest = "^8.0"
+pytest = ">=8.0, <8.4"
 pytest-cov = ">=6.0.0, <7.0"
-pytest-django = "^4.5.2"
-pytest-sugar = "^1.0"
-coverage = { version = "^7.0.0", extras = ["toml"] }
-django-coverage-plugin = "^3.0.0"
-djlint = "^1.31.0"
+pytest-django = ">=4.5.2, <5.0.0"
+pytest-sugar = "1.0.0"
+coverage = { version = ">=7.0.0, <8.0.0", extras = ["toml"] }
+django-coverage-plugin = ">=3.0.0, <3.2.0"
 sphinx = ">= 8.0, <9.0"
+djlint = ">=1.31.0, <1.40.0"
 sphinx-lint = "1.0"
 safety = "3.2.3"
-factory-boy = "^3.2.0"
+factory-boy = "3.3.1"
 werkzeug = ">=3.1, <4.0"
-pyopenssl = ">=24.0, <25.0"
-furo = "^2024.0"
+pyopenssl = ">=24.0, <26.0"
+furo = ">=2024.0, <2025.0"
 django-types = ">=0.20.0, <0.21.0"
+
+[tool.poetry.requires-plugins]
+poetry-plugin-export = ">=1.8"
 
 [tool.coverage.run]
 branch = true
@@ -170,7 +172,7 @@ DJANGO_SETTINGS_MODULE = "config.test"
 addopts = "--reuse-db -p no:warnings"
 python_files = ["test_*.py"]
 filterwarnings = [
-    "ignore::django.utils.deprecation.RemovedInDjango51Warning",
+    # "ignore::django.utils.deprecation.RemovedInDjango51Warning",
 ]
 
 [tool.ruff]
