@@ -9,7 +9,7 @@
 
 </div>
 
-- A basic poll application using the Django 5.1.x web framework
+- A basic poll application using the Django 5.2.x web framework
 
 ##### Table of Contents
  - [Features](#features)
