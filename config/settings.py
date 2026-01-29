@@ -2,7 +2,6 @@
 
 from pathlib import Path
 
-# import socket  # Comment out if not using debug_toolbar
 from environs import Env
 
 env = Env()
@@ -17,7 +16,6 @@ DEBUG = env.bool("DJANGO_DEBUG", default=False)
 
 ALLOWED_HOSTS = ["django-polls.cool", "localhost", "127.0.0.1"]
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -30,15 +28,14 @@ INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
     "django.contrib.sites",
-    # third-party apps
-    # "debug_toolbar",
+    # Third-party applications
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.github",
     "crispy_forms",
     "crispy_bootstrap4",
-    # "debug_toolbar",
+    "debug_toolbar",
     "django_countries",
     "django_extensions",
     # local apps
@@ -59,7 +56,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.contrib.admindocs.middleware.XViewMiddleware",
-    # "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -122,9 +119,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Internationalization
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "America/Vancouver"
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -141,19 +139,13 @@ STATICFILES_FINDERS = [
 ]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
 AUTH_USER_MODEL = "accounts.CustomUser"
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-# django-crispy-forms
-CRISPY_TEMPLATE_PACK = "bootstrap4"
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
-CRISPY_CLASS_CONVERTERS = {
-    "textinput": "textinput textInput",
-    "fileinput": "fileinput fileUpload",
-    "passwordinput": "textinput textInput",
-}
 
 # django-allauth config
 LOGIN_REDIRECT_URL = "poll_list"
@@ -209,8 +201,14 @@ SECURE_HSTS_PRELOAD = env.bool("DJANGO_SECURE_HSTS_PRELOAD", default=True)
 SESSION_COOKIE_SECURE = env.bool("DJANGO_SESSION_COOKIE_SECURE", default=True)
 CSRF_COOKIE_SECURE = env.bool("DJANGO_CSRF_COOKIE_SECURE", default=True)
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media"
+# django-crispy-forms
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_CLASS_CONVERTERS = {
+    "textinput": "textinput textInput",
+    "fileinput": "fileinput fileUpload",
+    "passwordinput": "textinput textInput",
+}
 
 ADMINS = [("Kevin Bowen", "kevinbowen@protonmail.com")]
 MANAGERS = ADMINS
@@ -254,9 +252,10 @@ LOGGING = {
 }
 
 # django-debug-toolbar
+
 # Note: disable when running Nox tests
 # Use the following in Docker only:
 # hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
 # INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 # The following is for use locally:
-# INTERNAL_IPS = ["127.0.0.1"]
+INTERNAL_IPS = ["127.0.0.1"]
