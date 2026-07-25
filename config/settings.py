@@ -126,7 +126,6 @@ TIME_ZONE = "UTC"
 
 USE_I18N = True
 
-USE_L10N = True
 
 USE_TZ = True
 
@@ -137,7 +136,14 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
@@ -145,7 +151,6 @@ MEDIA_ROOT = BASE_DIR / "media"
 AUTH_USER_MODEL = "accounts.CustomUser"
 
 # Default primary key field type
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # django-allauth config
 LOGIN_REDIRECT_URL = "poll_list"
@@ -210,7 +215,7 @@ CRISPY_CLASS_CONVERTERS = {
     "passwordinput": "textinput textInput",
 }
 
-ADMINS = [("Kevin Bowen", "kevinbowen@protonmail.com")]
+ADMINS = ["kevinbowen@protonmail.com"]
 MANAGERS = ADMINS
 
 # LOGGING
