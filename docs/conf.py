@@ -2,7 +2,7 @@
 
 project = "django-polls"
 author = "Kevin Bowen"
-copyright = f"2025, {author}"
+copyright = f"%Y, {author}"
 #
 html_theme = "furo"
 html_logo = "django_24.png"
