@@ -71,8 +71,8 @@
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="z_3b2f18166c6e22ae_apps_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.15.2">coverage.py v7.15.2</a>,
-            created at 2026-07-24 17:04 -0700
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.15.4">coverage.py v7.15.4</a>,
+            created at 2026-08-12 15:32 -0700
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -100,18 +100,16 @@
     <p class="run"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t"><span class="op">@</span><span class="nam">admin</span><span class="op">.</span><span class="nam">register</span><span class="op">(</span><span class="nam">Question</span><span class="op">)</span>&nbsp;</span><span class="r"><label for="ctxs11" class="ctx">(empty)</label></span></p>
     <p class="run"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t"><span class="key">class</span> <span class="nam">QuestionAdmin</span><span class="op">(</span><span class="nam">admin</span><span class="op">.</span><span class="nam">ModelAdmin</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><label for="ctxs12" class="ctx">(empty)</label></span></p>
     <p class="run"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t">    <span class="nam">fieldsets</span> <span class="op">=</span> <span class="op">[</span>&nbsp;</span><span class="r"><label for="ctxs13" class="ctx">(empty)</label></span></p>
-    <p class="run run2"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t">        <span class="op">(</span><span class="key">None</span><span class="op">,</span> <span class="op">{</span><span class="str">"fields"</span><span class="op">:</span> <span class="op">[</span><span class="str">"question_text"</span><span class="op">]</span><span class="op">}</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t">        <span class="op">(</span><span class="key">None</span><span class="op">,</span> <span class="op">{</span><span class="str">&quot;fields&quot;</span><span class="op">:</span> <span class="op">[</span><span class="str">&quot;question_text&quot;</span><span class="op">]</span><span class="op">}</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="run run2"><span class="n"><a id="t15" href="#t15">15</a></span><span class="t">        <span class="op">(</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t16" href="#t16">16</a></span><span class="t">            <span class="str">"Date information"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t17" href="#t17">17</a></span><span class="t">            <span class="op">{</span><span class="str">"fields"</span><span class="op">:</span> <span class="op">[</span><span class="str">"pub_date"</span><span class="op">]</span><span class="op">,</span> <span class="str">"classes"</span><span class="op">:</span> <span class="op">[</span><span class="str">"collapse"</span><span class="op">]</span><span class="op">}</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t16" href="#t16">16</a></span><span class="t">            <span class="str">&quot;Date information&quot;</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t17" href="#t17">17</a></span><span class="t">            <span class="op">{</span><span class="str">&quot;fields&quot;</span><span class="op">:</span> <span class="op">[</span><span class="str">&quot;pub_date&quot;</span><span class="op">]</span><span class="op">,</span> <span class="str">&quot;classes&quot;</span><span class="op">:</span> <span class="op">[</span><span class="str">&quot;collapse&quot;</span><span class="op">]</span><span class="op">}</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="run run2"><span class="n"><a id="t18" href="#t18">18</a></span><span class="t">        <span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="run run2"><span class="n"><a id="t19" href="#t19">19</a></span><span class="t">    <span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t20" href="#t20">20</a></span><span class="t">    <span class="nam">inlines</span> <span class="op">=</span> <span class="op">[</span><span class="nam">ChoiceInline</span><span class="op">]</span>&nbsp;</span><span class="r"><label for="ctxs20" class="ctx">(empty)</label></span></p>
-    <p class="run"><span class="n"><a id="t21" href="#t21">21</a></span><span class="t">    <span class="nam">list_display</span> <span class="op">=</span> <span class="op">(</span><span class="str">"question_text"</span><span class="op">,</span> <span class="str">"pub_date"</span><span class="op">,</span> <span class="str">"was_published_recently"</span><span class="op">)</span>&nbsp;</span><span class="r"><label for="ctxs21" class="ctx">(empty)</label></span></p>
-    <p class="run"><span class="n"><a id="t22" href="#t22">22</a></span><span class="t">    <span class="nam">list_filter</span> <span class="op">=</span> <span class="op">[</span><span class="str">"pub_date"</span><span class="op">]</span>&nbsp;</span><span class="r"><label for="ctxs22" class="ctx">(empty)</label></span></p>
-    <p class="run"><span class="n"><a id="t23" href="#t23">23</a></span><span class="t">    <span class="nam">search_fields</span> <span class="op">=</span> <span class="op">[</span><span class="str">"question_text"</span><span class="op">]</span>&nbsp;</span><span class="r"><label for="ctxs23" class="ctx">(empty)</label></span></p>
-    <p class="pln"><span class="n"><a id="t24" href="#t24">24</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t25" href="#t25">25</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t21" href="#t21">21</a></span><span class="t">    <span class="nam">list_display</span> <span class="op">=</span> <span class="op">(</span><span class="str">&quot;question_text&quot;</span><span class="op">,</span> <span class="str">&quot;pub_date&quot;</span><span class="op">,</span> <span class="str">&quot;was_published_recently&quot;</span><span class="op">)</span>&nbsp;</span><span class="r"><label for="ctxs21" class="ctx">(empty)</label></span></p>
+    <p class="run"><span class="n"><a id="t22" href="#t22">22</a></span><span class="t">    <span class="nam">list_filter</span> <span class="op">=</span> <span class="op">[</span><span class="str">&quot;pub_date&quot;</span><span class="op">]</span>&nbsp;</span><span class="r"><label for="ctxs22" class="ctx">(empty)</label></span></p>
+    <p class="run"><span class="n"><a id="t23" href="#t23">23</a></span><span class="t">    <span class="nam">search_fields</span> <span class="op">=</span> <span class="op">[</span><span class="str">&quot;question_text&quot;</span><span class="op">]</span>&nbsp;</span><span class="r"><label for="ctxs23" class="ctx">(empty)</label></span></p>
 </main>
 <footer>
     <div class="content">
@@ -120,8 +118,8 @@
             <a class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a class="nav" href="z_3b2f18166c6e22ae_apps_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.15.2">coverage.py v7.15.2</a>,
-            created at 2026-07-24 17:04 -0700
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.15.4">coverage.py v7.15.4</a>,
+            created at 2026-08-12 15:32 -0700
         </p>
     </div>
 </footer>
