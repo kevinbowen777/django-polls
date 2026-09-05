@@ -27,6 +27,42 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+django-polls 0.3.6 (2026-09-05)
+===============================
+
+Contributor-facing changes
+--------------------------
+
+-  (`#626 <https://github.com/kevinbowen777/django-polls/626>`_): Initial zizmor remediation. Pin GitHub actions to hashes.
+
+-  (`#628 <https://github.com/kevinbowen777/django-polls/628>`_): Update django-allauth to 65.19.1
+
+-  (`#628 <https://github.com/kevinbowen777/django-polls/628>`_): Update nox to 2026.8.10
+
+-  (`#628 <https://github.com/kevinbowen777/django-polls/628>`_): Update django-debug-toolbar to 7.1.1
+
+-  (`#633 <https://github.com/kevinbowen777/django-polls/633>`_): Update towncrier to 26.9.0
+
+-  (`#633 <https://github.com/kevinbowen777/django-polls/633>`_): Update django-debug-toolbar to 8.0.0
+
+-  (`#633 <https://github.com/kevinbowen777/django-polls/633>`_): Upgrade to environs to 15.2.0
+
+-  (`#633 <https://github.com/kevinbowen777/django-polls/633>`_): Update django-allauth to 65.19.2
+
+-  (`#633 <https://github.com/kevinbowen777/django-polls/633>`_): Update nox to 2026.8.17
+
+-  (`#633 <https://github.com/kevinbowen777/django-polls/633>`_): Update psycopg to 3.3.5
+
+-  (`#633 <https://github.com/kevinbowen777/django-polls/633>`_): Update djlint to 1.45.2
+
+-  (`#633 <https://github.com/kevinbowen777/django-polls/633>`_): Upgrade to gunicorn to 26.2.0
+
+
+New features
+------------
+
+-  (`#633 <https://github.com/kevinbowen777/django-polls/633>`_): Upgrade to Django 6.1.1
+
 django-polls 0.3.5 (2026-08-12)
 ===============================
 
