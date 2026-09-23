@@ -20,3 +20,4 @@ class QuestionFactory(factory.django.DjangoModelFactory):
 
     class Meta:
         model = Question
+        skip_postgeneration_save = True
