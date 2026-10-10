@@ -27,6 +27,30 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+django-polls 0.3.8 (2026-10-10)
+===============================
+
+Security updated
+----------------
+
+-  (`#641 <https://github.com/kevinbowen777/django-polls/641>`_): Update django-allauth to 65.19.7
+
+-  (`#642 <https://github.com/kevinbowen777/django-polls/642>`_): Update Django to 6.1.2
+
+
+Contributor-facing changes
+--------------------------
+
+-  (`#638 <https://github.com/kevinbowen777/django-polls/638>`_): Fix Factory DeprecationWarning
+
+-  (`#639 <https://github.com/kevinbowen777/django-polls/639>`_): Fix CentralCovContextWarning
+
+-  (`#641 <https://github.com/kevinbowen777/django-polls/641>`_): Update djlint to 1.46.4
+
+-  (`#641 <https://github.com/kevinbowen777/django-polls/641>`_): Update testing for Python 3.14.8, 3.13.16, 3.12.15
+
+-  (`#641 <https://github.com/kevinbowen777/django-polls/641>`_): Update werkzeug to 3.1.9
+
 django-polls 0.3.7 (2026-09-23)
 ===============================
 

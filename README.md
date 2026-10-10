@@ -18,6 +18,7 @@
 - [Testing](#testing)
 - [Application Demo](#application-demo)
 - [Screenshots](#screenshots)
+- [Contributions](#contributions)
 - [Reporting Bugs](#reporting-bugs)
 
 ---
@@ -144,6 +145,13 @@ TBD
 ### Poll Results
 
 ![Poll results](images/poll_results.png)
+
+---
+
+### Contributions
+
+You are free to fork this repository and modify as you see fit. See
+[CONTRIBUTING](https://github.com/kevinbowen777/django-polls/CONTRIBUTING.md) for details on reporting issues, etc.
 
 ---
 
