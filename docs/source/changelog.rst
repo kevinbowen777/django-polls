@@ -27,6 +27,38 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+django-polls 0.3.9 (2026-10-25)
+===============================
+
+Security updated
+----------------
+
+-  (`#644 <https://github.com/kevinbowen777/django-polls/644>`_): Update pip to 26.2.2
+
+-  (`#644 <https://github.com/kevinbowen777/django-polls/644>`_): Update django-allauth to 65.20.1
+
+-  (`#644 <https://github.com/kevinbowen777/django-polls/644>`_): Update .python-version with 3.14.9, 3.13.17
+
+-  (`#644 <https://github.com/kevinbowen777/django-polls/644>`_): Update certifi to 2026.10.19
+
+-  (`#644 <https://github.com/kevinbowen777/django-polls/644>`_): Update pillow to 13.0.0
+
+
+Improved documentation
+----------------------
+
+-  (`#644 <https://github.com/kevinbowen777/django-polls/644>`_): Remove legacy license classifier
+
+
+Contributor-facing changes
+--------------------------
+
+-  (`#644 <https://github.com/kevinbowen777/django-polls/644>`_): Update ruff rules & fix reported errors
+
+-  (`#644 <https://github.com/kevinbowen777/django-polls/644>`_): Update nox to 2026.10.20
+
+-  (`#644 <https://github.com/kevinbowen777/django-polls/644>`_): Update djlint to 1.47.0
+
 django-polls 0.3.8 (2026-10-10)
 ===============================
 

@@ -30,8 +30,10 @@ class QuestionIndexViewTests(TestCase):
     def test_question_index_view_for_logged_out_user(self):
         response = self.client.get(reverse("poll_list"))
         self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, "%s?next=/polls/" % (reverse("account_login")))
-        response = self.client.get("%s?next=/polls/" % (reverse("account_login")))
+        self.assertRedirects(
+            response, "{}?next=/polls/".format(reverse("account_login"))
+        )
+        response = self.client.get("{}?next=/polls/".format(reverse("account_login")))
         self.assertContains(response, "Log In")
 
     def test_no_questions(self):
@@ -105,8 +107,10 @@ class QuestionDetailViewTests(TestCase):
     def test_question_detail_view_for_logged_out_user(self):
         response = self.client.get(reverse("poll_list"))
         self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, "%s?next=/polls/" % (reverse("account_login")))
-        response = self.client.get("%s?next=/polls/" % (reverse("account_login")))
+        self.assertRedirects(
+            response, "{}?next=/polls/".format(reverse("account_login"))
+        )
+        response = self.client.get("{}?next=/polls/".format(reverse("account_login")))
         self.assertContains(response, "Log In")
 
     def test_future_question(self):
@@ -143,8 +147,10 @@ class QuestionResultsViewTests(TestCase):
     def test_question_results_view_for_logged_out_user(self):
         response = self.client.get(reverse("poll_list"))
         self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, "%s?next=/polls/" % (reverse("account_login")))
-        response = self.client.get("%s?next=/polls/" % (reverse("account_login")))
+        self.assertRedirects(
+            response, "{}?next=/polls/".format(reverse("account_login"))
+        )
+        response = self.client.get("{}?next=/polls/".format(reverse("account_login")))
         self.assertContains(response, "Log In")
 
     def test_future_question(self):
