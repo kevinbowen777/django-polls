@@ -32,7 +32,6 @@ class ChoiceTests(TestCase):
         )
 
     def test___str__(self):
-        assert self.choice.__str__() == self.choice.choice_text
         assert str(self.choice) == self.choice.choice_text
 
 
@@ -53,7 +52,6 @@ class QuestionTests(TestCase):
         """
 
     def test___str__(self):
-        assert self.question.__str__() == self.question.question_text
         assert str(self.question) == self.question.question_text
 
     def test_was_published_recently_with_old_question(self):
